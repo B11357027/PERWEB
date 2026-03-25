@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鄭雯心 | 個人學研主頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --ink-black: #1a1a1a;
+            --paper-white: #f4f1de;
+            --palace-red: #8e292c;
+            --gold-accent: #c5a367;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            color: var(--ink-black);
+            /* 使用紙張纖維紋理背景 */
+            background-color: var(--paper-white);
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        }
+
+        h1, h2, .font-serif {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .main-accent {
+            color: var(--palace-red);
+        }
+
+        .section-title {
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: var(--palace-red);
+        }
+
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--palace-red), var(--gold-accent));
+            border-radius: 3px;
+        }
+
+        /* 國風裝飾：雲紋 */
+        .cloud-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+            position: relative;
+        }
+
+        .cloud-bg::after {
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            background-image: url('https://www.transparenttextures.com/patterns/oriental-tiles.png');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .profile-card {
+            box-shadow: 0 20px 25px -5px rgb(142 41 44 / 0.1);
+            border: 1px solid rgba(197, 163, 103, 0.3);
+        }
+
+        .nav-link:hover {
+            color: var(--palace-red);
+            border-bottom: 2px solid var(--palace-red);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div>
+                <div class="text-xl font-bold font-serif text-red-900">鄭雯心 <span class="text-sm font-normal text-slate-500 ml-2 uppercase tracking-widest font-sans">WEN-HSIN CHENG</span></div>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-700">
+                <a href="#home" class="nav-link transition py-2">首頁</a>
+                <a href="#about" class="nav-link transition py-2">關於我</a>
+                <a href="#experience" class="nav-link transition py-2">學習經歷</a>
+                <a href="#skills" class="nav-link transition py-2">核心領域</a>
+                <a href="#contact" class="nav-link transition py-2">聯繫資訊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主視覺區 (融合國風與老師的專業排版) -->
+    <section id="home" class="pt-40 pb-20 px-6 cloud-bg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <!-- 左側裝飾圖 (取代照片) -->
+            <div class="relative w-full md:w-1/3 flex justify-center">
+                <div class="profile-card relative bg-white p-6 rounded-lg overflow-hidden flex flex-col items-center justify-center">
+                    <!-- 使用國風圖騰樣式作為占位符 -->
+                    <div class="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center bg-stone-50 border-2 border-dashed border-amber-200 rounded-lg">
+                        <div class="text-center">
+                            <i class="fas fa-fan text-7xl text-red-800 opacity-20 mb-4"></i>
+                            <p class="font-serif text-red-900/40 text-lg tracking-[0.5em]">雯心墨韻</p>
+                        </div>
+                    </div>
+                    <!-- 裝飾小標籤 (模仿老師網頁的齒輪按鈕，但改為印章感) -->
+                    <div class="absolute -bottom-2 -right-2 bg-red-800 text-white w-16 h-16 flex items-center justify-center rounded-sm shadow-lg border-2 border-amber-200">
+                        <span class="font-serif text-xl">鄭</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右側文字 -->
+            <div class="w-full md:w-2/3">
+                <div class="inline-block px-4 py-1 bg-red-800 text-white text-xs font-bold rounded-sm mb-6 tracking-[0.2em] uppercase shadow-sm">
+                    工業管理 ‧ 資料處理 ‧ 藝文素養
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6 font-serif">
+                    致力於數據分析與<br>
+                    <span class="text-red-800">工管價值的實踐化</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed font-serif italic">
+                    「心如止水鑑常照，身似流雲自在飛」<br>
+                    <span class="text-sm font-sans not-italic text-slate-400">屏東科技大學 工業管理系 | 音樂與國風文化愛好者</span>
+                </p>
+                <div class="flex gap-4">
+                    <a href="#experience" class="bg-red-800 text-white px-8 py-3 rounded-sm font-medium hover:bg-red-900 transition shadow-lg shadow-red-200">了解經歷</a>
+                    <a href="#contact" class="border border-red-800 text-red-800 px-8 py-3 rounded-sm font-medium hover:bg-red-50 transition">聯繫合作</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 經歷與背景 -->
+    <section id="experience" class="py-24 px-6 bg-stone-50/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- 個人經歷 -->
+                <div>
+                    <h2 class="section-title mb-10 font-serif">個人經歷</h2>
+                    <div class="space-y-8 border-l-2 border-red-100 pl-8 ml-1 relative">
+                        <div class="relative">
+                            <!-- 圓點改為印章感 -->
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-sm bg-red-800 border-2 border-white transform rotate-45"></div>
+                            <h3 class="text-lg font-bold text-red-900 font-serif">屏東科技大學 | 2023 - 至今</h3>
+                            <p class="text-slate-800 font-medium mb-1">工業管理系 二年級</p>
+                            <p class="text-sm text-slate-500 leading-relaxed">專注於生產管理、品質控制與系統工程，致力於將數據技術導入工業流程改善。</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-sm bg-stone-300 border-2 border-white transform rotate-45"></div>
+                            <h3 class="text-lg font-bold text-stone-700 font-serif">資料處理科背景</h3>
+                            <p class="text-slate-800 font-medium mb-1">技術型高中 畢業</p>
+                            <p class="text-sm text-slate-500 leading-relaxed">奠定扎實的 Excel 數據處理、程式設計邏輯與會計資訊基礎。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 研究領域與興趣 -->
+                <div>
+                    <h2 class="section-title mb-10 font-serif">研究領域與興趣</h2>
+                    <div class="space-y-4">
+                        <div class="bg-white p-6 rounded-lg border border-stone-100 shadow-sm flex items-start gap-4 hover:border-red-200 transition">
+                            <div class="text-red-800 mt-1"><i class="fas fa-brush text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 font-serif">數據驅動決策</h4>
+                                <p class="text-sm text-slate-500">結合資處背景，將統計數據轉化為工廠管理的具體建議。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg border border-stone-100 shadow-sm flex items-start gap-4 hover:border-red-200 transition">
+                            <div class="text-red-800 mt-1"><i class="fas fa-scroll text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 font-serif">國風美學應用</h4>
+                                <p class="text-sm text-slate-500">喜愛傳統文化與國風音樂，將東方美學元素融入數位內容設計。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg border border-stone-100 shadow-sm flex items-start gap-4 hover:border-red-200 transition">
+                            <div class="text-red-800 mt-1"><i class="fas fa-music text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 font-serif">音樂與管理平衡</h4>
+                                <p class="text-sm text-slate-500">音樂是思考的催化劑，在節奏中尋求工業效率與放鬆的平衡。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心技能 -->
+    <section id="skills" class="py-20 px-6 bg-white/40">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-3xl font-bold mb-16 text-red-900 font-serif">核心背景優勢</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-8 bg-white rounded-lg shadow-sm border border-stone-100 group hover:bg-red-50 transition">
+                    <div class="text-3xl text-red-800 mb-4 group-hover:scale-110 transition"><i class="fas fa-file-code"></i></div>
+                    <div class="font-bold font-serif">資訊處理</div>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-sm border border-stone-100 group hover:bg-red-50 transition">
+                    <div class="text-3xl text-red-800 mb-4 group-hover:scale-110 transition"><i class="fas fa-industry"></i></div>
+                    <div class="font-bold font-serif">生產管理</div>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-sm border border-stone-100 group hover:bg-red-50 transition">
+                    <div class="text-3xl text-red-800 mb-4 group-hover:scale-110 transition"><i class="fas fa-compact-disc"></i></div>
+                    <div class="font-bold font-serif">藝文素養</div>
+                </div>
+                <div class="p-8 bg-white rounded-lg shadow-sm border border-stone-100 group hover:bg-red-50 transition">
+                    <div class="text-3xl text-red-800 mb-4 group-hover:scale-110 transition"><i class="fas fa-feather-alt"></i></div>
+                    <div class="font-bold font-serif">創意設計</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯繫資訊 -->
+    <section id="contact" class="py-24 px-6 cloud-bg border-t border-stone-200">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 text-red-900 font-serif text-[1.8em]">聯繫資訊</h2>
+            <p class="text-slate-500 mb-12 italic font-serif">「勤於業，誠於心」— 期待與您的交流與合作。</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-800 group-hover:bg-red-800 group-hover:text-white transition">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="text-slate-700 font-medium">your.email@npust.edu.tw</span>
+                </div>
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-800 group-hover:bg-red-800 group-hover:text-white transition">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <span class="text-slate-700 font-medium">國立屏東科技大學</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="py-12 border-t border-stone-200 text-center text-stone-400 text-sm bg-stone-50">
+        <p class="font-serif tracking-widest">© 2024 鄭雯心 WEN-HSIN CHENG. 屏科大工業管理系</p>
+    </footer>
+
+</body>
+</html>
